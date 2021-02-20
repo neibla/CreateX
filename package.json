@@ -1,86 +1,107 @@
 {
-	"name": "createx",
-	"displayName": "CreateX",
-	"description": "Helps you start projects from vscode",
-	"version": "0.0.1",
-	"publisher": "neibla",
-	"author": {
-	  "name": "Neil Blake",
-	  "email": "neil0blake@gmail.com",
-	  "url": "https://github.com/neibla"
-	},
-	"license": "MIT",
-	"repository": {
-	  "type": "git",
-	  "url": "https://github.com/neibla/CreateX.git"
-	},
-	"engines": {
-		"vscode": "^1.51.0"
-	},
-	"categories": [
-		"Other"
-	],
-	"keywords": [
-		"django",
-		"react",
-		"reactjs",
-		"nextjs",
-		"next",
-		"vite",
-		"rails",
-		"ror",
-		"ruby on rails",
-		"expo",
-		"reactnative",
-		"create",
-		"new",
-		"project"
-	  ],
-	
-	"activationEvents": [
-		"onCommand:extension.createx.django",
-		"onCommand:extension.createx.expo",
-		"onCommand:extension.createx.next",
-		"onCommand:extension.createx.vite",
-		"onCommand:extension.createx.viteyarn",
-		"onCommand:extension.createx.react",
-		"onCommand:extension.createx.rails"
-	],
-	"main": "./out/extension.js",
-	"contributes": {
-		"commands": [
-			{ "title": "CreateX: Create Django Project", "command": "extension.createx.django" },
-			{ "title": "CreateX: Create Expo App","command": "extension.createx.expo" },
-			{ "title": "CreateX: Create Next App",  "command": "extension.createx.next" },
-			{ "title": "CreateX: Create Vite App", "command": "extension.createx.vite" },
-			{ "title": "CreateX: Create Vite App (Yarn)", "command": "extension.createx.viteyarn" },
-			{ "title": "CreateX: Create React App",  "command": "extension.createx.react" },
-			{ "title": "CreateX: Create Ruby On Rail Project", "command": "extension.createx.rails" }
-		]
-	},
-	"scripts": {
-		"halp": "node halp.js",
-		"vscode:prepublish": "yarn run compile",
-		"compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
-		"pretest": "yarn run compile && yarn run lint",
-		"lint": "eslint src --ext ts",
-		"test": "node ./out/test/runTest.js"
-	},
-	"devDependencies": {
-		"@types/glob": "^7.1.3",
-		"@types/mocha": "^8.0.0",
-		"@types/node": "^12.11.7",
-		"@types/vscode": "^1.51.0",
-		"@typescript-eslint/eslint-plugin": "^4.1.1",
-		"@typescript-eslint/parser": "^4.1.1",
-		"eslint": "^7.9.0",
-		"glob": "^7.1.6",
-		"mocha": "^8.1.3",
-		"typescript": "^4.0.2",
-		"vscode-test": "^1.4.0"
-	},
-	"dependencies": {
-		"chokidar": "^3.5.1"
-	}
+  "name": "createx",
+  "displayName": "CreateX",
+  "description": "Helps you start projects from vscode",
+  "version": "0.0.1",
+  "publisher": "neibla",
+  "author": {
+    "name": "Neil Blake",
+    "email": "neil0blake@gmail.com",
+    "url": "https://github.com/neibla"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neibla/CreateX.git"
+  },
+  "engines": {
+    "vscode": "^1.51.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "django",
+    "react",
+    "reactjs",
+    "nextjs",
+    "next",
+    "vite",
+    "rails",
+    "ror",
+    "ruby on rails",
+    "expo",
+    "reactnative",
+    "create",
+    "new",
+    "project"
+  ],
+  "activationEvents": [
+    "onCommand:extension.createx.django",
+    "onCommand:extension.createx.expo",
+    "onCommand:extension.createx.next",
+    "onCommand:extension.createx.vite",
+    "onCommand:extension.createx.viteyarn",
+    "onCommand:extension.createx.react",
+    "onCommand:extension.createx.rails"
+  ],
+  "main": "./out/extension.js",
+  "icon": "images/icon.png",
+  "contributes": {
+    "commands": [
+      {
+        "title": "CreateX: Create Django Project",
+        "command": "extension.createx.django"
+      },
+      {
+        "title": "CreateX: Create Expo App",
+        "command": "extension.createx.expo"
+      },
+      {
+        "title": "CreateX: Create Next App",
+        "command": "extension.createx.next"
+      },
+      {
+        "title": "CreateX: Create Vite App",
+        "command": "extension.createx.vite"
+      },
+      {
+        "title": "CreateX: Create Vite App (Yarn)",
+        "command": "extension.createx.viteyarn"
+      },
+      {
+        "title": "CreateX: Create React App",
+        "command": "extension.createx.react"
+      },
+      {
+        "title": "CreateX: Create Ruby On Rail Project",
+        "command": "extension.createx.rails"
+      }
+    ]
+  },
+  "scripts": {
+    "halp": "node halp.js",
+    "vscode:prepublish": "yarn run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "yarn run compile && yarn run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.0.0",
+    "@types/node": "^12.11.7",
+    "@types/vscode": "^1.51.0",
+    "@typescript-eslint/eslint-plugin": "^4.1.1",
+    "@typescript-eslint/parser": "^4.1.1",
+    "eslint": "^7.9.0",
+    "glob": "^7.1.6",
+    "mocha": "^8.1.3",
+    "typescript": "^4.0.2",
+    "vscode-test": "^1.4.0"
+  },
+  "dependencies": {
+    "chokidar": "^3.5.1"
+  }
 }

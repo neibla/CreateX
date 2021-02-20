@@ -1,9 +1,33 @@
 [
-    { "title": "Create Django Project", "command": "django-admin startproject", "extension": "django" },
-    { "title": "Create Expo App", "command": "expo init", "extension": "expo" },
-    { "title": "Create Next App", "command": "npx create-next-app", "extension": "next" },
-    { "title": "Create Vite App", "command": "npm init @vitejs/app", "extension": "vite" },
-    { "title": "Create Vite App (Yarn)", "command": "yarn create @vitejs/app", "extension": "viteyarn" },
-    { "title": "Create React App", "command": "npx create-react-app", "extension": "react" },
-    { "title": "Create Ruby On Rail Project", "command": "rails new", "extension": "rails" }
+  {
+    "title": "Create Django Project",
+    "command": "django-admin startproject",
+    "extension": "django"
+  },
+  { "title": "Create Expo App", "command": "expo init", "extension": "expo" },
+  {
+    "title": "Create Next App",
+    "command": "npx create-next-app",
+    "extension": "next"
+  },
+  {
+    "title": "Create Vite App",
+    "command": "npm init @vitejs/app",
+    "extension": "vite"
+  },
+  {
+    "title": "Create Vite App (Yarn)",
+    "command": "yarn create @vitejs/app",
+    "extension": "viteyarn"
+  },
+  {
+    "title": "Create React App",
+    "command": "npx create-react-app",
+    "extension": "react"
+  },
+  {
+    "title": "Create Ruby On Rail Project",
+    "command": "rails new",
+    "extension": "rails"
+  }
 ]
