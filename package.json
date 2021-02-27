@@ -2,7 +2,7 @@
   "name": "createx",
   "displayName": "CreateX",
   "description": "Helps you start projects from vscode",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "neibla",
   "author": {
     "name": "Neil Blake",
@@ -80,13 +80,15 @@
     ]
   },
   "scripts": {
-    "halp": "node halp.js",
     "vscode:prepublish": "yarn run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "yarn run compile && yarn run lint",
     "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js"
+    "test": "node ./out/test/runTest.js",
+    "vscode:package": "vsce package",
+    "vscode:publish": "vsce publish"
+
   },
   "devDependencies": {
     "@types/glob": "^7.1.3",
