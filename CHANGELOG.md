@@ -1,6 +1,9 @@
 # Change Log
 
-### 0.0.1
+### 0.0.3
+Demo gif on readme
+
+### 0.0.2
 - (Bugfix) Fixed seperator for windows
 - (UX) Opening new project in current workspace
 
