@@ -12,8 +12,9 @@ async function selectParentFolderAndRun(command: string) {
         return;
     }
     const [parentPath, projectName, uri] = projectFolder;
+    
     const result = await selectVSCodeWindow(uri);
-    await executeCreateCommand(parentPath, projectName, command);
+    await executeCreateCommand(parentPath, projectName, uri, command);
 }
 
 async function selectVSCodeWindow(path: vscode.Uri) {
@@ -63,10 +64,14 @@ async function selectProjectFolder(): Promise<[string, string, vscode.Uri] | nul
     return [parentPath, projectName, result[0]];
 }
 
-async function executeCreateCommand(path: string, projectName: string, command: string) {
+async function executeCreateCommand(path: string, projectName: string, projectPath: vscode.Uri, commandTemplate: string) {
     const terminal = vscode.window.createTerminal({
         cwd: path
     });
     terminal.show();
-    terminal.sendText(command + " " + projectName, true);
+    const projectPathString = projectPath.path;
+    const command = commandTemplate
+                        .replace("{name}", projectName)
+                        .replace("{projectPath}", projectPathString);
+    terminal.sendText(command, true);
 }
